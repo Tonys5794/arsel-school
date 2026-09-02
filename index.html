@@ -34,17 +34,17 @@ section{padding:clamp(56px,6.2vw,112px) 0}
 
 /* header */
 header{position:sticky;top:0;z-index:40;background:var(--head);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.hrow{display:flex;align-items:center;gap:22px;height:83px}
+.hrow{display:flex;align-items:center;gap:26px;height:83px}
 .brand{font-size:14px;letter-spacing:2.8px;text-transform:uppercase;font-weight:600;white-space:nowrap}
 .brand span{color:var(--gold)}
-nav{display:flex;gap:20px;margin-left:auto;flex-wrap:nowrap}
+nav{display:flex;gap:24px;margin-left:auto;flex-wrap:nowrap}
 nav a{font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);font-weight:500;text-decoration:none;white-space:nowrap}
 nav a:hover{color:var(--ink)}
 .hinfo{font-size:13.5px;color:var(--muted);white-space:nowrap}
 .hphone{font-size:14px;font-weight:500;text-decoration:none;white-space:nowrap}
-@media(max-width:1320px){.hinfo{display:none}}
-@media(max-width:1150px){.hphone{display:none}}
-.hbtn{background:#F0EDE2;color:var(--deep-d);text-decoration:none;padding:12px 26px;border-radius:999px;font-size:14px;font-weight:600;white-space:nowrap}
+@media(max-width:1400px){.hinfo{display:none}}
+@media(max-width:1240px){.hphone{display:none}}
+.hbtn{flex:0 0 auto;background:#F0EDE2;color:var(--deep-d);text-decoration:none;padding:12px 26px;border-radius:999px;font-size:14px;font-weight:600;white-space:nowrap}
 .hbtn:hover{background:#E7E2D2}
 .burger{display:none;margin-left:auto;font-size:22px}
 
@@ -158,6 +158,7 @@ nav a:hover{color:var(--ink)}
 footer{background:var(--deep-d);color:#8FA69E;font-size:13.5px;padding:26px 0}
 footer .fr{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
 
+@media(max-width:1080px){nav{display:none}.burger{display:block}}
 @media(max-width:980px){
   nav,.hinfo,.hphone{display:none}
   .burger{display:block}
@@ -178,10 +179,7 @@ footer .fr{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
     <nav>
       <a href="#courses">Курсы</a>
       <a href="#how">Как проходит</a>
-      <a href="#result">После курса</a>
-      <a href="#qual">Повышение</a>
       <a href="#teacher">Преподаватель</a>
-      <a href="#docs">Документы</a>
       <a href="#works">Работы учениц</a>
       <a href="#contact">Контакты</a>
     </nav>
