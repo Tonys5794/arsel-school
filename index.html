@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Школа «Арсель» — обучение маникюру, педикюру и подологии в Перми</title>
+<meta name="description" content="Курсы маникюра и педикюра с нуля, повышение квалификации и мастер-классы в Перми. Автор программ — Гузель Мутыгулина, мастер высшей категории, 14 лет практики.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,600&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#F6F7F4; --bg2:#FFFFFF; --ink:#1B2725; --muted:#6E7C77;
+  --deep:#223A33; --deep-d:#16261F; --deep-soft:#E5EDE8;
+  --gold:#3E8C74; --gold-d:#2E6B58; --gold-lt:#AFD3C4;
+  --line:#E2E8E3; --head:rgba(247,244,238,.94);
+  --radius:18px; --wrap:1280px;
+  --shadow:0 16px 40px rgba(27,39,37,.07);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Manrope',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--sans);background:var(--bg);color:var(--ink);
+     font-size:clamp(16px,.42vw + 15px,18.5px);line-height:1.62;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;letter-spacing:-.01em;margin:0}
+h2{font-size:clamp(27px,3.1vw,50px);margin-bottom:12px;text-wrap:balance}
+h2 em{font-style:italic;color:var(--gold)}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 clamp(20px,3vw,44px)}
+section{padding:clamp(56px,6.2vw,112px) 0}
+.sec-head{margin-bottom:clamp(28px,3vw,52px);max-width:46em}
+.eyebrow{font-size:13px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px}
+.lead{color:var(--muted);margin:0}
+
+/* header */
+header{position:sticky;top:0;z-index:40;background:var(--head);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hrow{display:flex;align-items:center;gap:22px;height:83px}
+.brand{font-size:14px;letter-spacing:2.8px;text-transform:uppercase;font-weight:600;white-space:nowrap}
+.brand span{color:var(--gold)}
+nav{display:flex;gap:20px;margin-left:auto;flex-wrap:nowrap}
+nav a{font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);font-weight:500;text-decoration:none;white-space:nowrap}
+nav a:hover{color:var(--ink)}
+.hinfo{font-size:13.5px;color:var(--muted);white-space:nowrap}
+.hphone{font-size:14px;font-weight:500;text-decoration:none;white-space:nowrap}
+@media(max-width:1320px){.hinfo{display:none}}
+@media(max-width:1150px){.hphone{display:none}}
+.hbtn{background:#F0EDE2;color:var(--deep-d);text-decoration:none;padding:12px 26px;border-radius:999px;font-size:14px;font-weight:600;white-space:nowrap}
+.hbtn:hover{background:#E7E2D2}
+.burger{display:none;margin-left:auto;font-size:22px}
+
+/* hero */
+.hero{background:var(--deep);color:#fff;position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:2}
+.hero-in{max-width:640px;padding:clamp(56px,7vw,120px) 0}
+.hero .place{font-size:12.5px;letter-spacing:2.6px;text-transform:uppercase;color:var(--gold-lt);margin-bottom:26px}
+.hero h1{font-size:clamp(44px,6vw,92px);line-height:1}
+.hero .rule{display:flex;align-items:center;gap:16px;margin:18px 0 26px}
+.hero .rule i{height:1px;background:rgba(255,255,255,.28);flex:0 0 46px}
+.hero .rule span{font-size:12.5px;letter-spacing:2.4px;text-transform:uppercase;color:#C6D6D0}
+.hero p{color:#CFDCD7;max-width:30em;margin:0 0 32px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;padding:14px 28px;border-radius:999px;font-weight:600;font-size:15px}
+.btn-main{background:var(--gold);color:#fff}
+.btn-main:hover{background:var(--gold-d)}
+.btn-cream{background:#F3F1E8;color:var(--deep-d)}
+.btn-cream:hover{background:#E9E5D6}
+.hero-photo{position:absolute;right:0;top:0;bottom:0;width:46%;z-index:1}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block}
+.hero-photo:after{content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,var(--deep) 0%,rgba(34,58,51,.72) 26%,rgba(34,58,51,0) 62%)}
+
+/* course list */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0 34px}
+.tab{border:1px solid var(--line);background:var(--bg2);color:var(--ink);border-radius:999px;
+     padding:12px 24px;font:inherit;font-size:15px;cursor:pointer}
+.tab.on{background:var(--deep);border-color:var(--deep);color:#fff}
+.plist{max-width:900px}
+.prow{display:flex;align-items:flex-end;gap:14px;padding:20px 0;border-bottom:1px solid var(--line)}
+.prow:last-child{border-bottom:0}
+.pname{font-size:17px}
+.pname small{display:block;color:var(--muted);font-size:14px;margin-top:2px}
+.dots{flex:1;border-bottom:1px dotted #C4CFC9;transform:translateY(-6px)}
+.price{font-family:var(--serif);font-size:26px;min-width:130px;text-align:right;font-variant-numeric:tabular-nums;letter-spacing:.5px}
+.price s{display:block;font-family:var(--sans);font-size:13.5px;color:var(--muted);letter-spacing:0}
+.note{color:var(--muted);font-size:14.5px;margin-top:18px;max-width:46em}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(16px,2vw,32px)}
+@media(max-width:1100px){.steps{grid-template-columns:repeat(2,1fr)}}
+.step h3{font-size:24px;margin-bottom:8px}
+.step p{color:var(--muted);font-size:15.5px;margin:0}
+.step .num{font-family:var(--serif);font-size:15px;color:var(--gold);letter-spacing:2px;margin-bottom:10px}
+
+.result{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(26px,4vw,64px);align-items:start}
+.rlist div{padding:16px 0;border-bottom:1px solid var(--line)}
+.rlist div:first-child{border-top:1px solid var(--line)}
+.rlist b{display:block;font-size:17px;font-weight:600}
+.rlist span{color:var(--muted);font-size:15px}
+@media(max-width:980px){.result{grid-template-columns:1fr}}
+
+/* qual list */
+.qgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 clamp(24px,4vw,70px);max-width:900px}
+.qgrid div{padding:14px 0;border-bottom:1px solid var(--line);font-size:16.5px}
+
+/* teacher */
+.teacher{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(26px,4vw,64px);align-items:center}
+.teacher .ph{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5}
+.teacher .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.teacher ul{margin:20px 0 0;padding-left:20px;color:var(--muted)}
+.teacher li{margin-bottom:9px}
+
+/* works */
+.works{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.2vw,18px)}
+.works figure{margin:0;border-radius:var(--radius);overflow:hidden;aspect-ratio:3/4;background:var(--deep-soft)}
+.works img{width:100%;height:100%;object-fit:cover;display:block}
+.works figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 14px;color:#fff;font-size:13.5px;
+  background:linear-gradient(180deg,rgba(22,38,31,0),rgba(22,38,31,.82))}
+.works figure{position:relative}
+
+
+/* documents */
+.docs{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.2vw,18px)}
+.docs figure{margin:0;border-radius:var(--radius);overflow:hidden;background:var(--bg2);
+  border:1px solid var(--line);aspect-ratio:3/4}
+.docs img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:980px){.docs{grid-template-columns:repeat(2,1fr)}}
+
+/* contacts */
+.contact{background:var(--deep);color:#fff}
+.contact h2{color:#fff}
+.contact h2 em{color:var(--gold-lt)}
+.cgrid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(26px,4vw,64px);align-items:center}
+.contact p{color:#CFDCD7}
+.crows{border-top:1px solid rgba(255,255,255,.16)}
+.crow{display:flex;justify-content:space-between;gap:20px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.16);font-size:16px}
+.crow span{color:#A6BCB4}
+.crow a{text-decoration:none}
+
+footer{background:var(--deep-d);color:#8FA69E;font-size:13.5px;padding:26px 0}
+footer .fr{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+
+@media(max-width:980px){
+  nav,.hinfo,.hphone{display:none}
+  .burger{display:block}
+  .hero-photo{position:relative;width:100%;height:260px}
+  .hero-photo:after{background:linear-gradient(180deg,rgba(34,58,51,.15),var(--deep))}
+  .hero-in{padding:44px 0 52px}
+  .steps,.qgrid,.teacher,.cgrid{grid-template-columns:1fr}
+  .works{grid-template-columns:repeat(2,1fr)}
+  .price{min-width:104px;font-size:23px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hrow">
+    <div class="brand">Арсель · <span>школа</span></div>
+    <nav>
+      <a href="#courses">Курсы</a>
+      <a href="#how">Как проходит</a>
+      <a href="#result">После курса</a>
+      <a href="#qual">Повышение</a>
+      <a href="#teacher">Преподаватель</a>
+      <a href="#docs">Документы</a>
+      <a href="#works">Работы учениц</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <a class="hphone" href="tel:+79068771816">+7 906 877-18-16</a>
+    <div class="hinfo">Пермь · Ярославского, 60</div>
+    <a class="hbtn" href="#contact">Записаться</a>
+    <div class="burger">☰</div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-photo">
+    <img src="https://tonys5794.github.io/arsel/hero-v2.jpg" alt="Гузель Мутыгулина — автор курсов школы «Арсель»">
+  </div>
+  <div class="wrap">
+    <div class="hero-in">
+      <div class="place">Пермь · Ем. Ярославского, 60 · обучение</div>
+      <h1>Школа Арсель</h1>
+      <div class="rule"><i></i><span>Маникюр · Педикюр · Подология</span></div>
+      <p>Профессия с нуля и повышение квалификации для действующих мастеров. Автор программ — Гузель Мутыгулина, мастер высшей категории с четырнадцатью годами практики.</p>
+      <div class="cta">
+        <a class="btn btn-main" href="#courses">Программы и цены</a>
+        <a class="btn btn-cream" href="#contact">Узнать даты</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="courses">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Обучение</div>
+      <h2>От нуля <em>до дохода</em></h2>
+      <p class="lead">Ступени идут по нарастанию: каждая следующая включает предыдущую и добавляет технику, за которую мастер берёт дороже. Остановиться можно на любой.</p>
+    </div>
+
+    <div class="tabs">
+      <button class="tab on" data-t="man">Маникюр с нуля</button>
+      <button class="tab" data-t="ped">Педикюр с нуля</button>
+      <button class="tab" data-t="up">Повышение квалификации</button>
+    </div>
+
+    <div class="plist" data-p="man">
+      <div class="prow"><div class="pname">Базовый курс<small>техника, санитарные нормы, покрытие, работа с клиентом</small></div><i class="dots"></i><div class="price">25 000 ₽</div></div>
+      <div class="prow"><div class="pname">Продвинутый<small>твёрдые материалы и дизайн</small></div><i class="dots"></i><div class="price">35 000 ₽</div></div>
+      <div class="prow"><div class="pname">Премиум класс<small>наращивание на верхних формах, сложный дизайн</small></div><i class="dots"></i><div class="price">50 000 ₽</div></div>
+      <div class="prow"><div class="pname">Мастер-предприниматель<small>от навыков к доходу и масштабированию</small></div><i class="dots"></i><div class="price">65 000 ₽</div></div>
+    </div>
+
+    <div class="plist" data-p="ped" hidden>
+      <div class="prow"><div class="pname">Базовый курс<small>педикюр и эстетика с элементами подологии</small></div><i class="dots"></i><div class="price">25 000 ₽</div></div>
+      <div class="prow"><div class="pname">Продвинутый<small>расширенная техника обработки</small></div><i class="dots"></i><div class="price">30 000 ₽</div></div>
+      <div class="prow"><div class="pname">Премиум курс<small>работа со сложными случаями</small></div><i class="dots"></i><div class="price">50 000 ₽</div></div>
+      <div class="prow"><div class="pname">Экспертный курс<small>высший уровень подготовки</small></div><i class="dots"></i><div class="price">70 000 ₽</div></div>
+    </div>
+
+    <div class="plist" data-p="up" hidden>
+      <div class="prow"><div class="pname">Живой курс<small>занятие с преподавателем в студии, одна выбранная техника</small></div><i class="dots"></i><div class="price">15 000 ₽<s>17 000 ₽</s></div></div>
+      <div class="prow"><div class="pname">Мастер-класс<small>актуальные дизайны маникюра и педикюра</small></div><i class="dots"></i><div class="price">2 000 ₽<s>3 500 ₽</s></div></div>
+      <div class="prow"><div class="pname">Методическое пособие<small>материалы курса отдельно</small></div><i class="dots"></i><div class="price">2 500 ₽<s>3 500 ₽</s></div></div>
+      <p class="note">Направления повышения квалификации — ниже. Точные даты ближайших занятий называет студия при записи.</p>
+    </div>
+  </div>
+</section>
+
+<section id="how" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Как проходит</div>
+      <h2>Обучение <em>без воды</em></h2>
+      <p class="lead">Занятия идут в студии на улице Емельяна Ярославского, 60 — в жилом доме «Полосатый». Учит сама Гузель: она же принимает клиентов, поэтому программа обновляется под то, с чем мастера сталкиваются сейчас.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">01</div><h3>Теория без воды</h3><p>Сразу к делу, без лишних часов ни о чём.</p></div>
+      <div class="step"><div class="num">02</div><h3>Практика на моделях</h3><p>Много работы руками под контролем опытного мастера.</p></div>
+      <div class="step"><div class="num">03</div><h3>Разбор ошибок</h3><p>Частые промахи и приёмы, которые экономят время в работе.</p></div>
+      <div class="step"><div class="num">04</div><h3>Чек-листы</h3><p>Алгоритмы, чтобы не путаться в этапах уже после курса.</p></div>
+      <div class="step"><div class="num">05</div><h3>Сертификат</h3><p>Документ по окончании — плюс к доверию клиентов с первого дня.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="result">
+  <div class="wrap">
+    <div class="result">
+      <div>
+        <div class="eyebrow">Что остаётся после курса</div>
+        <h2>Не конспект, <em>а профессия</em></h2>
+        <p class="lead">Курс заканчивается не последним занятием, а первым клиентом, которого вы принимаете сами.</p>
+      </div>
+      <div class="rlist">
+        <div><b>Сертификат</b><span>подтверждение обучения, которое можно показать клиенту</span></div>
+        <div><b>Отработанная техника</b><span>руки, которые помнят, а не конспект, который лежит</span></div>
+        <div><b>Чек-листы и алгоритмы</b><span>порядок работы, чтобы не путаться в этапах</span></div>
+        <div><b>Понимание цены</b><span>из чего складывается стоимость и как её не занижать</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="qual">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Действующим мастерам</div>
+      <h2>Повышение <em>квалификации</em></h2>
+      <p class="lead">Один навык за занятие — для тех, кто уже принимает и упирается в конкретную технику.</p>
+    </div>
+    <div class="qgrid">
+      <div>Квадрат TOP master</div>
+      <div>Миндаль TOP master</div>
+      <div>Идеальный френч</div>
+      <div>Безболезненный аппаратный маникюр</div>
+      <div>Наращивание на верхних формах</div>
+      <div>Наращивание на нижних формах</div>
+      <div>Педикюр с элементами подологии</div>
+      <div>Актуальные дизайны маникюра и педикюра</div>
+    </div>
+  </div>
+</section>
+
+<section id="teacher" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="teacher">
+      <div class="ph"><img src="https://tonys5794.github.io/arsel/hero-v2.jpg" alt="Гузель Мутыгулина"></div>
+      <div>
+        <div class="eyebrow">Преподаватель</div>
+        <h2>Гузель <em>Мутыгулина</em></h2>
+        <p class="lead">Владелица студии красоты «Арсель» и автор всех программ школы.</p>
+        <ul>
+          <li>Дипломированный и аккредитованный мастер высшей категории по маникюру и педикюру.</li>
+          <li>Четырнадцать лет профессионального стажа.</li>
+          <li>Практикующий подолог — уход за стопами и ногтями, работа с проблемными случаями.</li>
+          <li>Ведёт приём сама, а не только учит.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="docs">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Документы</div>
+      <h2>Дипломы и <em>сертификаты</em></h2>
+      <p class="lead">Подтверждение квалификации преподавателя — то, на что смотрят, когда выбирают, кому платить за обучение.</p>
+    </div>
+    <div class="docs">
+      <figure><img src="doc-1.jpg" alt="Диплом" onerror="this.closest('figure').remove()"></figure>
+      <figure><img src="doc-2.jpg" alt="Сертификат" onerror="this.closest('figure').remove()"></figure>
+      <figure><img src="doc-3.jpg" alt="Сертификат" onerror="this.closest('figure').remove()"></figure>
+      <figure><img src="doc-4.jpg" alt="Сертификат" onerror="this.closest('figure').remove()"></figure>
+    </div>
+  </div>
+</section>
+
+<section id="works">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">После курса</div>
+      <h2>Работы <em>учениц</em></h2>
+      <p class="lead">Снимки сделаны на занятиях и сразу после них.</p>
+    </div>
+    <div class="works">
+      <figure><img src="https://tonys5794.github.io/arsel/u-1.jpg" alt="Дизайн после курса «Маникюр с нуля»"><figcaption>Дизайн после курса «Маникюр с нуля»</figcaption></figure>
+      <figure><img src="https://tonys5794.github.io/arsel/u-2.jpg" alt="Работа ученицы"><figcaption>Работа ученицы курса</figcaption></figure>
+      <figure><img src="https://tonys5794.github.io/arsel/u-3.jpg" alt="Классика: форма и красный лак"><figcaption>Классика: форма и красный лак</figcaption></figure>
+      <figure><img src="https://tonys5794.github.io/arsel/u-4.jpg" alt="Выпускница курса с сертификатом"><figcaption>Выпускница курса с сертификатом</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="cgrid">
+      <div>
+        <div class="eyebrow" style="color:var(--gold-lt)">Запись на обучение</div>
+        <h2>Узнать даты <em>ближайшего курса</em></h2>
+        <p>Напишите «Хочу на курс» — расскажем расписание ближайшего потока и подскажем, с какой ступени начинать под вашу задачу. Количество мест на поток ограничено.</p>
+        <div class="cta" style="margin-top:26px">
+          <a class="btn btn-main" href="tel:+79068771816">Позвонить</a>
+          <a class="btn btn-cream" href="https://vk.me/arselbeautyperm">Написать «Хочу на курс»</a>
+        </div>
+      </div>
+      <div class="crows">
+        <div class="crow"><span>Телефон</span><a href="tel:+79068771816">+7 906 877-18-16</a></div>
+        <div class="crow"><span>Мессенджеры</span><span>Telegram, MAX</span></div>
+        <div class="crow"><span>Адрес</span><span>Пермь, Ем. Ярославского, 60</span></div>
+        <div class="crow"><span>ВКонтакте</span><a href="https://vk.ru/arselbeautyperm">arselbeautyperm</a></div>
+        <div class="crow"><span>Студия</span><a href="https://tonys5794.github.io/arsel/">сайт студии «Арсель»</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fr">
+    <div>Школа «Арсель» · Пермь</div>
+    <div>ИП Мутыгулина Гузель Хамидулловна · ИНН 591792262308</div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.tab').forEach(function(b){
+  b.addEventListener('click', function(){
+    document.querySelectorAll('.tab').forEach(function(x){ x.classList.remove('on'); });
+    b.classList.add('on');
+    document.querySelectorAll('[data-p]').forEach(function(p){ p.hidden = (p.dataset.p !== b.dataset.t); });
+  });
+});
+
+window.addEventListener('load', function(){
+  var d = document.getElementById('docs');
+  if (d && !d.querySelectorAll('.docs figure').length) d.remove();
+});
+</script>
+</body>
+</html>
